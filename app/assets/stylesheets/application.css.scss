@@ -10,19 +10,23 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'masonry/transitions'
+*= require 'masonry/basic'
+*= require 'masonry/centered'
+*= require 'masonry/fluid'
+*= require 'masonry/gutters'
+*= require 'masonry/infinitescroll'
+*= require 'masonry/right-to-left'
+*= require 'masonry/transitions'
+*= require_tree .
+*= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-	background: #E9E9E9;
-}
+body {background: #E9E9E9;}
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 100;
-}
+h1, h2, h3, h4, h5, h6 {font-weight: 100;}
 
 nav {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
@@ -40,7 +44,7 @@ nav {
 #pins {
   margin: 0 auto;
   width: 100%;
-  .box {
+	.box {
 	  margin: 10px;
 	  width: 350px;
 	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
